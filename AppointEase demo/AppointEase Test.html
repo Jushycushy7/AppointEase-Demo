@@ -29,17 +29,22 @@
             <span class="details">Phone Number</span>
             <input type="text" placeholder="Enter your number" required>
           </div>
+          <!-- Input for Address -->
+          <div class="input-box">
+            <span class="details">Address</span>
+            <input type="text" placeholder="Enter your Address" required>
+          </div>
+          <!-- Input for Date of Birth -->
+          <div class="input-box">
+            <span class="details">Date of Birth</span>
+            <input type="date" placeholder="Enter your date of birth" required>
+          </div>
           <!-- Input for Problem -->
           <div class="input-box">
             <span class="details">Issues</span>
-            <input type="text" placeholder="Whats the problem?" required>
+            <input type="text" placeholder="What is the Problem?" required>
+          </div>
           </div> 
-          <!-- Input for Password -->
-          <div class="input-box">
-            <span class="details">Address</span>
-            <input type="password" placeholder="Enter your Address" required>
-          </div>
-          </div>
         <div class="gender-details">
           <!-- Radio buttons for gender selection -->
           <input type="radio" name="gender" id="dot-1">
@@ -65,11 +70,24 @@
           </div>
         </div>
         <!-- Submit button -->
-        <div class="button">
-          <input type="submit" value="Register">
+        <button type="submit" class="button" onclick="openpopup()">Submit</button>
+        <div class="popup" id="popup">
+          <img src="tick.png">
+          <h2>Thank You!</h2>
+          <p>Your details has been successfully submitted</p>
+          <button type="button"onclick="closepopup()">OK</button>
         </div>
       </form>
     </div>
   </div>
+  <script>
+  let popup = document.getElementById("popup");
+  function openpopup(){
+    popup.classList.add("open-popup");
+  }
+  function closepopup(){
+    popup.classList.remove("open-popup");
+  }
+  </script>
 </body>
 </html>
