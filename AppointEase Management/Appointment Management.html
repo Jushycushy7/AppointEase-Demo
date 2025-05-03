@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         /* Custom CSS for the message box */
         #message-box {
@@ -116,6 +117,19 @@
     </style>
 </head>
 <body class="bg-gray-100 font-inter antialiased">
+    <h1>Header</h1>
+    Navigation Bar 
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-link">Home</a></li>
+            <li><a href="appointments.html" class="navbar-link">Appointments</a></li>
+            <li><a href="patients.html" class="navbar-link">Patients</a></li>
+            <li><a href="reports.html" class="navbar-link">Reports</a></li>
+            <li><a href="about.html" class="navbar-link">About</a></li>
+        </ul>
+    </nav>
+
+    
     <div class="min-h-screen flex flex-col">
         <header class="bg-indigo-500 text-white py-4 shadow-md">
             <div class="container mx-auto px-4">
@@ -337,7 +351,7 @@
 
         // Sample patient data for patient records (replace with actual data source)
         let patients = [
-            { id: 101, name: "John Doe", appointments: [1, 6], medicalNotes: "Patient has a history of allergies." },
+            { id: 101, name: "John Doe", appointments: [1, 6], medicalNotes: "Patient has a history of allergies." },   
             { id: 102, name: "Jane Smith", appointments: [2, 7], medicalNotes: "Patient is in good health." },
             { id: 103, name: "Mike Johnson", appointments: [3, 8], medicalNotes: "Patient is recovering from surgery." },
             { id: 104, name: "Alice Brown", appointments: [4, 9], medicalNotes: "Patient has a skin condition." },
@@ -615,6 +629,8 @@
         renderCalendar();
         renderAppointments(filterAppointments());
         updateSummaryCounts();
+
+
     </script>
 </body>
 </html>
